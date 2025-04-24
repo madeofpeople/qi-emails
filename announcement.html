@@ -51,7 +51,7 @@
       margin: 0 auto !important;
       max-width: 600px;
       width: 600px;
-      padding: 22px 0 0 0;
+      padding: 0;
       box-shadow: 2px 2px 12px #00000077;
     }
     
@@ -75,6 +75,11 @@
       box-sizing: border-box;
     }
     
+    .header {
+      padding: 22px;
+      background-color: #404352;
+    }
+    
     .footer {
       clear: both;
       padding-top: 24px;
@@ -93,10 +98,6 @@
 
     .footer a:hover {
       text-decoration: underlined;
-    }
-
-    .header {
-      padding: 22px;
     }
     
     .event__info {
@@ -120,6 +121,10 @@
       font-style: normal;
       line-height: 1;
     }
+
+    time {
+      font-size: 14px; display: block; font-size: 14px; margin-bottom: 11px;
+    }
     
     .event__title {
       width: 100%;
@@ -136,22 +141,27 @@
     }
 
     .event__date-time {
-      width: 180px;
+      width: 165px;
       float: left;
       clear: right;
     }
 
     .event__location {
-      float: right;
+      float: left;
       padding-top: 0;
-      width: 50%;
       display: block;
-      border: 1px #000 solid;
-      clear: both;
     }
 
     .event__venue {
+      box-sizing: border-box;
+      margin-top: 0;
       position: relative;
+      padding-left: 14px;
+      padding-right: 11px;
+      background-size: 9px 12px;
+      background-image: url(http://madeofpeople.org/qi/icon-location.png);
+      background-repeat: no-repeat;
+      background-position: 1px 4px;
     }
 
     .event__venue img {
@@ -180,10 +190,6 @@
       margin-top: 11px;
       text-decoration: underline;
       font-size: 12px;
-    }
-
-    .event__venue {
-      margin-top: 22px;
     }
 
     p {
@@ -250,8 +256,20 @@
       color: white;
     }
 
+    .social-icon {
+      color: white;
+    }
+
+    .social-icon:hover {
+      border-bottom: 2px #fff solid;
+    }
+
      
   @media (min-width: 601px) {
+    
+    .container {
+      padding-top: 22px;
+    }
 
     .event__info {
       height: 320px;
@@ -270,22 +288,24 @@
       height: 240px;
     }
 
+    .event__date-time {
+      float: none !important;
+
+    }
     .event__location {
-      float: none;
+      position: relative;
+      left: -16px;
+      float: none !important;
       padding-top: 0;
       width: auto;
       margin-top: 22px;
-    }
-
-    .event__velue {
-      margin-top: 0;
     }
   }
 
     </style>
   </head>
   <body>
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+    <table class="body" role="presentation" border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td class="container">
 
@@ -300,7 +320,7 @@
 
               <!-- Header -->
               <tr>
-                <td class="header" bgcolor="#404352">
+                <td class="header">
                   <!-- Logo -->
                   <a href="http://quincyinst.org" target="_blank">
 
@@ -327,14 +347,13 @@
                               <div class="event__details">
 
                                 <div class="event__date-time">
-                                  <h3>March 26, 2025</h3>
-                                  <time style="font-size: 14px; display: block; font-size: 14px; margin-bottom: 11px;">6:00 PM - 8:00 PM</time>
+                                  <h3>Mar 26, 2025</h3>
+                                  <time >6:00 PM - 8:00 PM</time>
                                   <a class="action-button" href="#">Register</a>
                                   <a class="text-link" href="#">A text link below</a>
                                 </div>
 
                                 <div class="event__location">
-                                  <img src="http://madeofpeople.org/qi/icon-location.png" width="9" height="13" alt="location icon"/>
                                   <div class="event__venue">
                                     <b>Washington Press Club</b><br>529 14th St. Northwest<br>Washington, DC 20045
                                   </div>
@@ -448,32 +467,32 @@
             <table class="footer" role="presentation" border="0" cellpadding="0" cellspacing="0" style="padding: 33px 22px 22px 22px; background-color: #2E3141; border-bottom: 11px #3A4778 solid">
               <tr>
                 <td>
-                  <a style="color: white" rel="noopener nofollow" target="_blank" href="https://facebook.com/QuincyInst">
+                  <a class="social-icon" rel="noopener nofollow" target="_blank" href="https://facebook.com/QuincyInst">
                     <img src="http://madeofpeople.org/qi/qi-soc-in.png" height="24" width="24" alt="LinkedIn" />
                     <span style="position: fixed; left: -300px;opacity:0; height:0; width: 0; line-height: 0; visibility: hidden; overflow: hidden;">LinkedIn</span>
                   </a>
                 </td>
                 <td>
-                  <a style="color: white" rel="noopener nofollow" target="_blank" href="https://twitter.com/QuincyInst">
+                  <a class="social-icon" rel="noopener nofollow" target="_blank" href="https://twitter.com/QuincyInst">
 
                     <img src="http://madeofpeople.org/qi/qi-soc-twit.png" height="24" width="24" alt="X" />
                     <span style="position: fixed; left: -300px;opacity:0; height:0; width: 0; line-height: 0; visibility: hidden; overflow: hidden;">X</span>
                   </a>
                 </td>
                 <td>
-                  <a style="color: white" rel="noopener nofollow" target="_blank" href="https://www.instagram.com/quincyinst/">
+                  <a class="social-icon" rel="noopener nofollow" target="_blank" href="https://www.instagram.com/quincyinst/">
                     <img src="http://madeofpeople.org/qi/qi-soc-inst.png" height="24" width="24" alt="Instagram" />
                     <span style="position: fixed; left: -300px;opacity:0; height:0; width: 0; line-height: 0; visibility: hidden; overflow: hidden;">Instagram</span>
                   </a>
                 </td>
                 <td>
-                  <a style="color: white" rel="noopener nofollow" target="_blank" href="https://www.youtube.com/channel/UC2dx4opuCjn7W-Z4nD6GDcQ">
+                  <a class="social-icon" rel="noopener nofollow" target="_blank" href="https://www.youtube.com/channel/UC2dx4opuCjn7W-Z4nD6GDcQ">
                     <img src="http://madeofpeople.org/qi/qi-soc-yt.png" height="24" width="24" alt="YouTube" />
                     <span style="position: fixed; left: -300px;opacity:0; height:0; width: 0; line-height: 0; visibility: hidden; overflow: hidden;">YouTube</span>
                   </a>
                 </td>
                 <td>
-                  <a style="color: white" rel="noopener nofollow" target="_blank" href="https://www.instagram.com/quincyinst/">
+                  <a class="social-icon" rel="noopener nofollow" target="_blank" href="https://www.instagram.com/quincyinst/">
                     <img src="http://madeofpeople.org/qi/qi-soc-fb.png" height="24" width="24" alt="Facebook" />
                     <span style="position: fixed; left: -300px;opacity:0; height:0; width: 0; line-height: 0; visibility: hidden; overflow: hidden;">Facebook</span>
                   </a>
